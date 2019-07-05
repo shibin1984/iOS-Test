@@ -13,6 +13,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         ContactHelper.shared.delegate = self
         ContactHelper.shared.fectchContacts()
+        let rightBarItem = UIBarButtonItem.init(title: "Map", style: .plain, target: self, action: #selector(rightBarButtonAction))
+        self.navigationItem.setRightBarButton(rightBarItem, animated: true)
+    }
+    @objc func rightBarButtonAction() {
+        // Load the Map View
+        let mainSB = UIStoryboard.init(name: "Main", bundle: nil)
+        if let mapVC = mainSB.instantiateViewController(withIdentifier: "MapViewController") as? MapViewController {
+            self.navigationController?.pushViewController(mapVC, animated: true)
+        }
     }
 }
 extension ViewController: UITableViewDataSource {
@@ -23,7 +32,8 @@ extension ViewController: UITableViewDataSource {
         var cell = tableView.dequeueReusableCell(withIdentifier: "CELL_IDENTIFIER", for: indexPath)
         cell = UITableViewCell(style: .default, reuseIdentifier: "CELL_IDENTIFIER")
         let contact = ContactHelper.shared.contacts[indexPath.row]
-        cell.textLabel?.text = contact.givenName + " " + contact.familyName
+        let fullName = contact.givenName + " " + contact.middleName + " " + contact.familyName
+        cell.textLabel?.text = fullName
         cell.detailTextLabel?.text = contact.phoneNumbers.first?.value.stringValue
         if let imageData = contact.imageData {
             cell.imageView?.image = UIImage.init(data: imageData)
@@ -33,10 +43,7 @@ extension ViewController: UITableViewDataSource {
 }
 extension ViewController: ContactHelperDelegate {
     func didFinishFetchingContacts() {
-        // Reload the List view on the main thread once the contacts are fetched.
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+        self.tableView.reloadData()
     }
 }
 
