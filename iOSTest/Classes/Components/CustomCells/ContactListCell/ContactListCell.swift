@@ -22,7 +22,12 @@ class ContactListCell: UITableViewCell {
     func loadCellData(contactData: Contact) {
         let firstName = contactData.first_name ?? ""
         let lastName = contactData.last_name ?? ""
-        self.contactImage.sd_setImage(with: URL(string: "http://gojek-contacts-app.herokuapp.com/images/missing.png"),
+        var imageURL = contactData.profile_pic ?? ""
+        if imageURL == Constants.NO_IMAGE_NAME {
+            imageURL = Constants.BASE_IMAGE_URL + imageURL
+        }
+        self.contactImage.layer.cornerRadius = contactImage.frame.width / 2
+        self.contactImage.sd_setImage(with: URL(string: imageURL),
                                       placeholderImage: UIImage(named: "placeholder.png"))
         self.contactName.text = firstName + " " + lastName
     }
