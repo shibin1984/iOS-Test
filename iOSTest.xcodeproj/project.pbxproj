@@ -3,20 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11367A4622CF57EA00B840EF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11367A4522CF57EA00B840EF /* MapViewController.swift */; };
 		1194E90222CB4FEA007B8837 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1194E90122CB4FEA007B8837 /* Assets.xcassets */; };
 		1194E91022CB4FEA007B8837 /* iOSTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194E90F22CB4FEA007B8837 /* iOSTestTests.swift */; };
 		1194E91B22CB4FEA007B8837 /* iOSTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194E91A22CB4FEA007B8837 /* iOSTestUITests.swift */; };
 		1194E93222CB52DE007B8837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194E92D22CB52DE007B8837 /* AppDelegate.swift */; };
 		1194E93322CB52DE007B8837 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1194E92F22CB52DE007B8837 /* LaunchScreen.storyboard */; };
 		1194E93422CB52DE007B8837 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1194E93022CB52DE007B8837 /* Main.storyboard */; };
-		1194E93722CB6355007B8837 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194E93622CB6355007B8837 /* Utils.swift */; };
-		1194E93B22CB63D3007B8837 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194E93A22CB63D3007B8837 /* ViewController.swift */; };
-		1194E93D22CB649E007B8837 /* ContactHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194E93C22CB649E007B8837 /* ContactHelper.swift */; };
+		11BBB42F22D0683B00DD8D98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BBB42B22D0683B00DD8D98 /* ViewController.swift */; };
+		11BBB43222D0686500DD8D98 /* ContactListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BBB43022D0686500DD8D98 /* ContactListCell.swift */; };
+		11BBB43622D06E0000DD8D98 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BBB43522D06E0000DD8D98 /* Contact.swift */; };
+		11BBB43D22D07F8700DD8D98 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BBB43B22D07F8700DD8D98 /* Utils.swift */; };
+		11BBB43F22D07FA400DD8D98 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BBB43E22D07FA400DD8D98 /* NetworkManager.swift */; };
+		11BBB44222D0809700DD8D98 /* ContactHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BBB44122D0809700DD8D98 /* ContactHelper.swift */; };
 		17FFBC3ED8D0DAC24488A870 /* Pods_iOSTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A4B37E04E259E6D0CB0AC0 /* Pods_iOSTestTests.framework */; };
 		58442726269F9FE41EF1492E /* Pods_iOSTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3279565076E4DD2FB47A6A85 /* Pods_iOSTestUITests.framework */; };
 		C182FA9BCF38129726E96BF0 /* Pods_iOSTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4137E74D8FEF848E0E8DED17 /* Pods_iOSTest.framework */; };
@@ -40,7 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11367A4522CF57EA00B840EF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1194E8F722CB4FE8007B8837 /* iOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1194E90122CB4FEA007B8837 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1194E90622CB4FEA007B8837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,9 +54,12 @@
 		1194E92D22CB52DE007B8837 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1194E92F22CB52DE007B8837 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1194E93022CB52DE007B8837 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		1194E93622CB6355007B8837 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		1194E93A22CB63D3007B8837 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1194E93C22CB649E007B8837 /* ContactHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactHelper.swift; sourceTree = "<group>"; };
+		11BBB42B22D0683B00DD8D98 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		11BBB43022D0686500DD8D98 /* ContactListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListCell.swift; sourceTree = "<group>"; };
+		11BBB43522D06E0000DD8D98 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		11BBB43B22D07F8700DD8D98 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		11BBB43E22D07FA400DD8D98 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		11BBB44122D0809700DD8D98 /* ContactHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactHelper.swift; sourceTree = "<group>"; };
 		18A115FF8B7EF72B2CB1073A /* Pods-iOSTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTest/Pods-iOSTest.debug.xcconfig"; sourceTree = "<group>"; };
 		3279565076E4DD2FB47A6A85 /* Pods_iOSTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		393D42F7C984454DE17BD051 /* Pods-iOSTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTestTests/Pods-iOSTestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,29 +153,13 @@
 		1194E92822CB52DE007B8837 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				11BBB43722D07F6500DD8D98 /* Common */,
+				11BBB43422D06DEC00DD8D98 /* Models */,
 				1194E92B22CB52DE007B8837 /* Application */,
-				1194E93822CB63D3007B8837 /* Modules */,
-				1194E92922CB52DE007B8837 /* Utilities */,
-				1194E92A22CB52DE007B8837 /* Common */,
-				1194E93522CB6282007B8837 /* Network */,
+				11BBB42922D0683B00DD8D98 /* Controllers */,
+				11BBB42C22D0683B00DD8D98 /* Components */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		1194E92922CB52DE007B8837 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				1194E93C22CB649E007B8837 /* ContactHelper.swift */,
-				1194E93622CB6355007B8837 /* Utils.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		1194E92A22CB52DE007B8837 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		1194E92B22CB52DE007B8837 /* Application */ = {
@@ -191,28 +179,86 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
-		1194E93522CB6282007B8837 /* Network */ = {
+		11BBB42922D0683B00DD8D98 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				11BBB42A22D0683B00DD8D98 /* LandingScreen */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		11BBB42A22D0683B00DD8D98 /* LandingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				11BBB42B22D0683B00DD8D98 /* ViewController.swift */,
+			);
+			path = LandingScreen;
+			sourceTree = "<group>";
+		};
+		11BBB42C22D0683B00DD8D98 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				11BBB42D22D0683B00DD8D98 /* CustomCells */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		11BBB42D22D0683B00DD8D98 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				11BBB42E22D0683B00DD8D98 /* ContactListCell */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		11BBB42E22D0683B00DD8D98 /* ContactListCell */ = {
+			isa = PBXGroup;
+			children = (
+				11BBB43022D0686500DD8D98 /* ContactListCell.swift */,
+			);
+			path = ContactListCell;
+			sourceTree = "<group>";
+		};
+		11BBB43422D06DEC00DD8D98 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11BBB43522D06E0000DD8D98 /* Contact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		11BBB43722D07F6500DD8D98 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				11BBB44022D0809700DD8D98 /* Helper */,
+				11BBB43922D07F8700DD8D98 /* Utilities */,
+				11BBB43822D07F6D00DD8D98 /* Network */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		11BBB43822D07F6D00DD8D98 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				11BBB43E22D07FA400DD8D98 /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		1194E93822CB63D3007B8837 /* Modules */ = {
+		11BBB43922D07F8700DD8D98 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				1194E93922CB63D3007B8837 /* LandingScreen */,
+				11BBB43B22D07F8700DD8D98 /* Utils.swift */,
 			);
-			path = Modules;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
-		1194E93922CB63D3007B8837 /* LandingScreen */ = {
+		11BBB44022D0809700DD8D98 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				1194E93A22CB63D3007B8837 /* ViewController.swift */,
-				11367A4522CF57EA00B840EF /* MapViewController.swift */,
+				11BBB44122D0809700DD8D98 /* ContactHelper.swift */,
 			);
-			path = LandingScreen;
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		6DB69593E8C374E8169B2EEC /* Pods */ = {
@@ -397,20 +443,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iOSTest/Pods-iOSTest-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-iOSTest/Pods-iOSTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-iOSTest/Pods-iOSTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSTest/Pods-iOSTest-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSTest/Pods-iOSTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		62E5C8A2466A12FAC72EFD7C /* [CP] Check Pods Manifest.lock */ = {
@@ -464,11 +505,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1194E93B22CB63D3007B8837 /* ViewController.swift in Sources */,
+				11BBB43F22D07FA400DD8D98 /* NetworkManager.swift in Sources */,
+				11BBB43622D06E0000DD8D98 /* Contact.swift in Sources */,
 				1194E93222CB52DE007B8837 /* AppDelegate.swift in Sources */,
-				1194E93D22CB649E007B8837 /* ContactHelper.swift in Sources */,
-				11367A4622CF57EA00B840EF /* MapViewController.swift in Sources */,
-				1194E93722CB6355007B8837 /* Utils.swift in Sources */,
+				11BBB44222D0809700DD8D98 /* ContactHelper.swift in Sources */,
+				11BBB43222D0686500DD8D98 /* ContactListCell.swift in Sources */,
+				11BBB42F22D0683B00DD8D98 /* ViewController.swift in Sources */,
+				11BBB43D22D07F8700DD8D98 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

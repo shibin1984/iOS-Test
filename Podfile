@@ -7,7 +7,8 @@ target 'iOSTest' do
 
   # Pods for iOSTest
   pod 'Alamofire', '~> 5.0.0-beta.5'
-
+  pod 'SDWebImage', '~> 5.0'
+  
   target 'iOSTestTests' do
     inherit! :search_paths
     # Pods for testing
