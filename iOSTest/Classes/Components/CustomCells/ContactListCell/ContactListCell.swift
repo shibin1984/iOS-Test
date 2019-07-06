@@ -8,9 +8,17 @@
 import UIKit
 import SDWebImage
 class ContactListCell: UITableViewCell {
-    @IBOutlet weak var contactImage: UIImageView!
+    @IBOutlet weak var contactImage: UIImageView! {
+        didSet {
+            contactImage.image = nil
+        }
+    }
     @IBOutlet weak var contactName: UILabel!
-    @IBOutlet weak var favouriteImage: UIImageView!
+    @IBOutlet weak var favouriteImage: UIImageView! {
+        didSet {
+            favouriteImage.image = nil
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -30,5 +38,6 @@ class ContactListCell: UITableViewCell {
         self.contactImage.sd_setImage(with: URL(string: imageURL),
                                       placeholderImage: UIImage(named: "placeholder.png"))
         self.contactName.text = firstName + " " + lastName
+        self.favouriteImage.image = contactData.favorite ?? false ? #imageLiteral(resourceName: "home_favourite.png") : nil
     }
 }
