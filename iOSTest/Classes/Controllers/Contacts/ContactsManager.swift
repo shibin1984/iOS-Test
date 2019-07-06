@@ -13,10 +13,13 @@ class ContactsManager: NSObject {
     static let shared = ContactsManager()
     private let service = NetworkManager()
     weak var delegate: ContactsManagerDelegate?
-    var contactList: [Contact]?
+    var groupedList: [String : [Contact]]?
+    var allKeys: [String]?
     func fetchContacts() {
         service.fetchContacts { (success, contactList) in
-            self.contactList = contactList
+            // Group the list of contacts based on alphabets
+            self.groupedList = Dictionary(grouping: contactList ?? [], by: { String($0.first_name?.prefix(1).uppercased() ?? "") })
+            self.allKeys = Array(self.groupedList!.keys).sorted()
             if let delegate = self.delegate {
                 delegate.didFinishFetchingContacts()
             }
