@@ -10,17 +10,20 @@ class ContactsListViewController: UIViewController {@IBOutlet weak var tableView
     let manager = ContactsManager.shared
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Create the left Navigation bar button item
+        let leftBarItem = UIBarButtonItem.init(title: "Groups", style: .plain, target: self, action: #selector(leftBarButtonAction))
+        self.navigationItem.setLeftBarButton(leftBarItem, animated: true)
+        // Create the Right Navigation bar button item
         let rightBarItem = UIBarButtonItem.init(title: "+", style: .plain, target: self, action: #selector(rightBarButtonAction))
         self.navigationItem.setRightBarButton(rightBarItem, animated: true)
         manager.delegate = self
         manager.fetchContacts()
     }
     @objc func rightBarButtonAction() {
-        // Load the Map View
-        //        let mainSB = UIStoryboard.init(name: "Main", bundle: nil)
-        //        if let mapVC = mainSB.instantiateViewController(withIdentifier: "MapViewController") as? MapViewController {
-        //            self.navigationController?.pushViewController(mapVC, animated: true)
-        //        }
+        // Load the add new contact screen
+    }
+    @objc func leftBarButtonAction() {
+        // Nothing to do. Requirement not specified.
     }
 }
 extension ContactsListViewController: UITableViewDataSource {
@@ -47,7 +50,13 @@ extension ContactsListViewController: UITableViewDataSource {
         if let key = manager.allKeys?[section] {
             return key
         }
-        return ""
+        return nil
+    }
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        if let key = manager.allKeys {
+            return key
+        }
+        return nil
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 65
