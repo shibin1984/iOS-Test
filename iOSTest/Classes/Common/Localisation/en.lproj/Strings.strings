@@ -1,0 +1,16 @@
+/* 
+  Strings.strings
+  iOSTest
+
+  Created by Shibin Moideen on 7/7/19.
+  Copyright © 2019 Shibin Moideen. All rights reserved.
+*/
+"Groups" = "Groups";
+"Contact" = "Contact";
+"Edit" = "Edit";
+"message" = "message";
+"call" = "call";
+"email" = "email";
+"favourite" = "favourite";
+"Cancel" = "Cancel";
+"Done" = "Done";

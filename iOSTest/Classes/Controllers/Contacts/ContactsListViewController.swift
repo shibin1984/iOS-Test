@@ -6,16 +6,23 @@
 //  Copyright © 2019 Shibin Moideen. All rights reserved.
 //
 import UIKit
-class ContactsListViewController: UIViewController {@IBOutlet weak var tableView: UITableView!
+class ContactsListViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.sectionIndexColor = ColorUtils.lightGray
+        }
+    }
     let manager = ContactsManager.shared
     override func viewDidLoad() {
         super.viewDidLoad()
         // Create the left Navigation bar button item
-        let leftBarItem = UIBarButtonItem.init(title: "Groups", style: .plain, target: self, action: #selector(leftBarButtonAction))
+        let leftBarItem = UIBarButtonItem.init(title: "Groups".localize(), style: .plain, target: self, action: #selector(leftBarButtonAction))
         self.navigationItem.setLeftBarButton(leftBarItem, animated: true)
         // Create the Right Navigation bar button item
         let rightBarItem = UIBarButtonItem.init(title: "+", style: .plain, target: self, action: #selector(rightBarButtonAction))
         self.navigationItem.setRightBarButton(rightBarItem, animated: true)
+        // Set the Navigation bar tint color
+        self.navigationController?.navigationBar.tintColor = ColorUtils.themeColor
         manager.delegate = self
         manager.fetchContacts()
     }
@@ -62,7 +69,7 @@ extension ContactsListViewController: UITableViewDataSource {
         return 65
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 15
+        return 30
     }
 }
 extension ContactsListViewController: UITableViewDelegate {

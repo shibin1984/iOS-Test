@@ -13,7 +13,11 @@ class ContactListCell: UITableViewCell {
             contactImage.image = nil
         }
     }
-    @IBOutlet weak var contactName: UILabel!
+    @IBOutlet weak var contactName: UILabel! {
+        didSet {
+            contactName.textColor = ColorUtils.darkGray
+        }
+    }
     @IBOutlet weak var favouriteImage: UIImageView! {
         didSet {
             favouriteImage.image = nil
@@ -35,8 +39,7 @@ class ContactListCell: UITableViewCell {
             imageURL = Constants.BASE_IMAGE_URL + imageURL
         }
         self.contactImage.layer.cornerRadius = contactImage.frame.width / 2
-        self.contactImage.sd_setImage(with: URL(string: imageURL),
-                                      placeholderImage: UIImage(named: "placeholder.png"))
+        self.contactImage.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.png"))
         self.contactName.text = firstName + " " + lastName
         self.favouriteImage.image = contactData.favorite ?? false ? #imageLiteral(resourceName: "home_favourite.png") : nil
     }
