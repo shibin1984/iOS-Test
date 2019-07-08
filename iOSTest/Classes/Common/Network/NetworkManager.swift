@@ -13,7 +13,7 @@ class NetworkManager {
             let urlRequest = URLRequest.init(url: url)
             URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
                 if let err = error {
-                    Utils.showGenericErrorPopup(title: "Error", message: err.localizedDescription, button1Title: "Ok", button2Title: "")
+                    Utils.showGenericErrorPopup(title: "Error", message: err.localizedDescription, button1Title: "Ok", button2Title: nil)
                     completion(false, nil)
                 }
                 if let data = data {
