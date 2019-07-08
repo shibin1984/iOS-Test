@@ -23,6 +23,7 @@ class ContactsListViewController: UIViewController {
         self.navigationItem.setRightBarButton(rightBarItem, animated: true)
         // Set the Navigation bar tint color
         self.navigationController?.navigationBar.tintColor = ColorUtils.themeColor
+        self.title = "Contact".localize()
         manager.delegate = self
         manager.fetchContacts()
     }
